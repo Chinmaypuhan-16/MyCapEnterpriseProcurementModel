@@ -1,0 +1,66 @@
+{
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.Display",
+      "description": "Display"
+    },
+    {
+      "name": "$XSAPPNAME.Editor",
+      "description": "Editor"
+    },
+    {
+      "name": "$XSAPPNAME.Viewer",
+      "description": "Viewer"
+    }
+  ],
+  "attributes": [
+    {
+      "name": "BankName",
+      "description": "BankName",
+      "valueType": "s",
+      "valueRequired": false
+    },
+    {
+      "name": "Country",
+      "description": "Country",
+      "valueType": "s",
+      "valueRequired": false
+    }
+  ],
+  "role-templates": [
+    {
+      "name": "Display",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.Display"
+      ],
+      "attribute-references": []
+    },
+    {
+      "name": "Editor",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.Editor"
+      ],
+      "attribute-references": []
+    },
+    {
+      "name": "Viewer",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.Viewer"
+      ],
+      "attribute-references": []
+    },
+    {
+      "name": "userattributes",
+      "description": "generated",
+      "default-role-name": "Attributes of a User",
+      "scope-references": [],
+      "attribute-references": [
+        "BankName",
+        "Country"
+      ]
+    }
+  ]
+}
